@@ -1,0 +1,453 @@
+:root{
+    --color-lightgray: #aaa9a9;
+    --color-darkgray: #707070;
+    --color-lightPurple: #cc23c1f3;
+    --color-black: #212529;
+    --color-button: #353131;
+    --color-heading: #505050;
+    --color-white: #fff;
+    --color-icons: #C5C3C5;
+}
+/* Trending Start */
+    .trendingItem{
+        margin:5rem 0;
+    }
+    .trendingItem .title-trending{
+        color: var(--color-heading);
+    }
+
+    .trendingItem .title-trending::before,
+    .trendingItem .title-trending::after{
+        content:"";
+        border:1px solid var(--color-lightgray);
+        width: 42%;
+        height: .5vh;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+    }
+
+    .trendingItem .hidden{
+        display: none;
+    }
+
+    .trendingItem .card{
+        border: none;
+        position: relative;
+    }
+
+    .trendingItem .card .price{
+        background-color: var(--color-black);
+        color: var(--color-white);
+        width: 25%;
+        height: 4vh;
+        line-height: 1.7rem;
+        text-align: center;
+        vertical-align: middle;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+    }
+
+    .trendingItem .card .discount{
+        background-color: var(--color-lightPurple);
+        color: var(--color-white);
+        border-radius: 50%;
+        word-break: break-all;
+        position: absolute;
+        top: 3%;
+        left: 10%;
+        text-align: center;
+        vertical-align: middle;
+        line-height: .2rem;
+        padding: 1.2rem 1rem .2rem 1rem;
+        z-index: 1;
+    }
+
+    .trendingItem .card .view{
+        background-color: rgba(0,0,0,0);
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 80%;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .trendingItem .card .view:hover{
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    .trendingItem .card .view .eye-icon{
+        background-color: rgba(0,0,0,0.7);
+        color: var(--color-white);
+        border-radius: 50%;
+        font-size: 30px;
+        padding: .5rem 1rem;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+    }
+
+    .trendingItem .card .view:hover .eye-icon{
+        opacity: 1;
+    }
+
+    .trendingItem .card .body-card .subTitle-trending{
+        color: var(--color-heading);
+        font-size: 35px;
+    }
+
+    .trendingItem .card .body-card .rating .star-icon{
+        color: var(--color-lightPurple);
+        font-size: 17px;
+    }
+
+    .trendingItem .card .body-card .rating .star-icon:last-of-type{
+        color: var(--color-lightgray);
+    }
+
+    .trendingItem .card .body-card .media .media-icon{
+        color: var(--color-lightgray);
+        border: 1px solid var(--color-lightgray);
+        border-radius: 50%;
+        font-size: 13px;
+        padding: .5rem .7rem;
+    }
+
+    .trendingItem .card .body-card .media .media-icon:hover{
+        background-color: var(--color-lightgray);
+        color: var(--color-white);
+    }
+    
+    .trendingItem .buttons-trending .btn{
+        color: var(--color-button);
+        border: 1px solid var(--color-button);
+        font-size: 20px;
+        font-weight: 600;
+        padding: .6rem 4rem;
+        transition: all .3s ease-in-out;
+    }
+
+    .trendingItem .buttons-trending .btn:hover{
+        background-color: var(--color-button);
+        color: var(--color-white);
+    }
+
+    .trendingItem .buttons-trending .less{
+        display: none;
+    }
+/* Trending End */
+
+        /********* query media *********/
+/* Mobile XS:320*/
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 375px) {
+    /* Trending Start */
+    .trendingItem .title-trending{
+        font-size: 26px;
+    }
+
+    .trendingItem .title-trending::before,
+    .trendingItem .title-trending::after{
+        width: 20%;
+    }
+
+    .trendingItem .card{
+        margin-bottom: 3rem;
+    }
+
+    .trendingItem .card .body-card{
+        text-align: center;
+        
+    }
+
+    .trendingItem .buttons-trending .btn{
+        padding: .4rem 2rem;
+    }
+    /* Trending End */
+}
+
+/* Mobile M:375*/
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 425px) {
+    /* Trending Start */
+    .trendingItem .title-trending{
+        font-size: 28px;
+    }
+
+    .trendingItem .title-trending::before,
+    .trendingItem .title-trending::after{
+        width: 23%;
+    }
+
+    .trendingItem .card .view{
+        height: 81.5%;
+    }
+
+    .trendingItem .card .body-card .subTitle-trending {
+        font-size: 40px;
+    }
+
+    .trendingItem .card .body-card .rating .star-icon{
+        font-size:  20px;
+    }
+
+    .trendingItem .card .body-card .media .media-icon{
+        font-size: 14px;
+    }
+
+    .trendingItem .buttons-trending .btn{
+        padding: .4rem 2rem;
+    }
+    /* Trending End */
+}
+
+/* Mobile L:425*/
+@media only screen
+and (min-device-width: 425px)
+and (max-device-width: 576px) {
+    /* Trending Start */
+    .trendingItem .title-trending{
+        font-size: 30px;
+    }
+
+    .trendingItem .title-trending::before,
+    .trendingItem .title-trending::after{
+        width: 25%;
+    }
+
+    .trendingItem .card{
+        margin-bottom: 3rem;
+    }
+
+    .trendingItem .card .body-card{
+        text-align: center;
+        
+    }
+
+    .trendingItem .card .price{
+        width: 30%;
+        height: 5vh;
+        line-height: 2rem;
+    }
+
+    .trendingItem .card .discount{
+        font-size: 15px;
+        padding: 1.3rem 1.3rem .3rem 1.3rem;
+    }
+
+    .trendingItem .card .view{
+        height: 83.5%;
+    }
+
+    .trendingItem .buttons-trending .btn{
+        padding: .3rem 3rem;
+    }
+    /* Trending End */
+}
+
+
+
+/* mobile 576*/
+@media only screen 
+and (min-device-width: 576px) 
+and (max-device-width: 768px){
+    /* Trending Start */
+    .trendingItem .title-trending {
+        font-size: 40px;
+    }
+
+    .trendingItem .title-trending::before,
+    .trendingItem .title-trending::after{
+        width: 25%;
+    }
+
+    .trendingItem .card .price{
+        font-size: 18px;
+        height: 6vh;
+        line-height: 2.5rem;
+    }
+
+    .trendingItem .card .discount{
+        font-size: 15px;
+        padding: 1.4rem 1.4rem .4rem 1.4rem;
+    }
+
+    .trendingItem .card .view{
+        height: 85.4%;
+    }
+
+    .trendingItem .card .view .eye-icon{
+        font-size: 40px;
+    }
+
+    .trendingItem .card .body-card .subTitle-trending {
+        font-size: 47px;
+    }
+
+    .trendingItem .card .body-card .rating .star-icon{
+        font-size: 25px;
+    }
+
+    .trendingItem .card .body-card .media .media-icon{
+        font-size: 15px;
+    }
+
+    .trendingItem .buttons-trending .btn{
+        font-size: 25px;
+        padding: .7rem 7rem;
+    }
+    /* Trending End */
+}
+
+/* tablet 768*/
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 992px){
+    /* Trending Start */
+    .trendingItem .title-trending{
+        font-size: 30px;
+    }
+
+    .trendingItem .title-trending::before,
+    .trendingItem .title-trending::after{
+        width: 35%;
+    }
+
+    .trendingItem .card .price{
+        font-size: 15px;
+        height: 6vh;
+    }
+
+    .trendingItem .card .discount{
+        font-size: 15px;
+        padding: 1.2rem 1rem .2rem 1rem;
+    }
+
+    .trendingItem .card .view{
+        height: 81.1%;
+    }
+
+    .trendingItem .card .view .eye-icon{
+        font-size: 30px;
+    }
+
+    .trendingItem .card .body-card .subTitle-trending {
+        font-size: 37px;
+    }
+
+    .trendingItem .card .body-card .rating .star-icon{
+        font-size: 20px;
+    }
+
+    .trendingItem .card .body-card .media .media-icon{
+        font-size: 13px;
+    }
+
+    .trendingItem .buttons-trending .btn{
+        font-size: 20px;
+        padding: .4rem 3rem;
+    }
+    /* Trending End */
+}
+
+/* tablet 992*/
+@media only screen 
+and (min-device-width: 992px) 
+and (max-device-width: 1200px){
+    /* Trending Start */
+    .trendingItem .title-trending{
+        font-size: 35px;
+    }
+
+    .trendingItem .title-trending::before,
+    .trendingItem .title-trending::after{
+        width: 38%;
+    }
+
+    .trendingItem .card .price{
+        width: 30%;
+        height: 4vh;
+    }
+
+    .trendingItem .card .discount{
+        font-size: 13px;
+        padding: 1rem 1rem .1rem 1rem;
+    }
+
+    .trendingItem .card .view{
+        height: 81.1%;
+    }
+
+    .trendingItem .card .body-card .subTitle-trending {
+        font-size: 35px;
+    }
+
+    .trendingItem .card .body-card .rating .star-icon{
+        font-size: 18px;
+    }
+
+    .trendingItem .card .body-card .media .media-icon{
+        font-size: 10px;
+    }
+    /* Trending End */
+}
+
+/* laptop 1200*/
+@media only screen 
+and (min-device-width: 1200px) 
+and (max-device-width: 1400px){
+    /* Trending Start */
+    .trendingItem .title-trending::before,
+    .trendingItem .title-trending::after{
+        width: 40%;
+    }
+
+    .trendingItem .card .view{
+        height: 78.2%;
+    }
+
+    .trendingItem .card .view .eye-icon{
+        font-size: 25px;
+    }
+
+    .trendingItem .card .body-card .subTitle-trending {
+        font-size: 30px;
+    }
+
+    .trendingItem .card .body-card .rating .star-icon{
+        font-size: 17px;
+    }
+
+    .trendingItem .buttons-trending .btn{
+        padding: .3rem 2rem;
+    }
+    /* Trending End */
+}
+
+/* laptop 1200*/
+@media only screen 
+and (min-device-width: 1400px) {
+    /* Trending Start */
+    .trendingItem .title-trending::before,
+    .trendingItem .title-trending::after{
+        width: 42%;
+    }
+
+    .trendingItem .card .view{
+        height: 80%;
+    }
+
+    .trendingItem .card .body-card .subTitle-trending {
+        font-size: 35px;
+    }
+
+    .trendingItem .card .body-card .rating .star-icon{
+        font-size: 19px;
+    }
+    /* Trending End */
+}
